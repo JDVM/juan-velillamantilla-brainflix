@@ -1,5 +1,6 @@
 import MohanMurugeJpg from "../../Assets/Images/Mohan-muruge.jpg";
 import Logo from "../../Assets/Logo/BrainFlix-logo.svg";
+import Button from "../Button/Button";
 
 function Header() {
   return (
@@ -22,9 +23,7 @@ function Header() {
           />
         </label>
       </article>
-      <button type="submit" className="header__button">
-        UPLOAD
-      </button>
+      <Button />
     </header>
   );
 }
