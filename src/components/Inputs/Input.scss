@@ -11,6 +11,9 @@
     margin: 0 .75rem;
     order: 1;
     border: $Mercury solid .125rem;
+    &:focus-visible {
+        border-color: $brainFlix-Blue;
+    }
     &:active{
         border-color: $brainFlix-Blue;
     }
