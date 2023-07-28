@@ -1,0 +1,9 @@
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins"as *;
+@use "../../Styles/partials/variables"as *;
+
+
+.video{
+    background-color: $brainFlix-DarkBlack;
+    color: $white;
+}
