@@ -1,0 +1,26 @@
+@use "../../Styles/Partials/fonts" as *;
+@use "../../Styles/Partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+.button{
+    background-color: $brainFlix-Blue;
+    @include lables-buttons;
+    color: $white;
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    border-radius: .25rem;
+    border: none;
+    &:hover{
+        background-color: $brainFlix-DarkBlue;
+    }
+    &-text{
+        width: 100%;
+
+    }
+    @include tablet {
+        width: 9.375rem;
+    }
+}

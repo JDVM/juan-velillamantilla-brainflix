@@ -1,29 +1,21 @@
-import MohanMurugeJpg from "../../Assets/Images/Mohan-muruge.jpg";
-import Logo from "../../Assets/Logo/BrainFlix-logo.svg";
+import Logo from "../Assets/Logo/BrainFlix-logo.svg";
 import Button from "../Button/Button";
+import './Header.scss';
+import UploadIcon from '../Assets/Icons/upload.svg'
+import Input from '../Inputs/Input'
+
 
 function Header() {
+  const uploadIcon = <img src={UploadIcon}/>
   return (
     <header className="header">
       <img src={Logo} className="header__logo" alt="Logo for BrainFlix" />
-      <article className="header__name">
-        <img
-          src={MohanMurugeJpg}
-          className="header__photo"
-          alt="Mohan Muruge face profile"
-        />
-        <label className="header__nameLabel bold" hmtlfor="Name">
-          NAME
-          <input
-            type="text"
-            name="nameInput"
-            id="Name"
-            className="header__nameText"
-            placeholder="Enter your name"
-          />
-        </label>
-      </article>
-      <Button />
+      <form className="header__form">
+        <div className="header__photo"></div>
+        
+        <Input />
+       <Button UploadIcon={uploadIcon} UploadString="UPLOAD"/>
+      </form>
     </header>
   );
 }

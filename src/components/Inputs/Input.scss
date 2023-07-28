@@ -1,0 +1,17 @@
+@use "../../Styles/Partials/fonts" as *;
+@use "../../Styles/Partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+
+.input {
+    min-width: 15rem;
+    min-height: 2.25rem;
+    @include lables-buttons;
+    border-radius: .25rem;
+    margin: 0 .75rem;
+    order: 1;
+    border: $Mercury solid .125rem;
+    &:active{
+        border-color: $brainFlix-Blue;
+    }
+}
