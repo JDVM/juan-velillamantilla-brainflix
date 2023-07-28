@@ -1,5 +1,9 @@
+@use "./Styles/partials/fonts" as *;
+@use "./Styles/partials/mixins"as *;
+@use "./Styles/partials/variables"as *;
 @use "../src/components/Header/Header.scss";
-@use "./components/VideoSection/VideoSection.scss";
+@use "../src/components/VideoSection/VideoSection.scss";
+@use "../src/components/VideoDescription/VideoDescription.scss";
 
 html,
 header,

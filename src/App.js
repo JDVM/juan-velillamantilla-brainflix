@@ -1,6 +1,7 @@
 import Header from './components/Header/Header'
 import VideoSection from './components/VideoSection/VideoSection'
 import './App.scss';
+import VideoDescrition from './components/VideoDescription/VideoDescription';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
     <Header /> 
     <VideoSection />
+    <VideoDescrition />
     </>
     
   )

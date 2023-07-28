@@ -1,0 +1,86 @@
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
+
+    &__title {
+        @include page-header
+    }
+
+    &__stats {
+        display: flex;
+        @include body-copy;
+        color: $silver ;
+        border-color: $Mercury;
+        border-top: .0625rem solid;
+        border-bottom: .0625rem solid;
+        justify-content: space-between;
+
+        @include tablet {
+            border-top: 0;
+            padding-bottom: .5rem;
+        }
+    }
+
+    &__by-and-date {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        color: $brainFlix-Black;
+
+        @include tablet {
+            padding-right: 2rem;
+        }
+    }
+
+    &__viewstats {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+
+    &__viewcount {
+        display: flex;
+
+        @include tablet {
+            padding-right: 2rem;
+        }
+
+        &--addedspacing {
+            padding-right: .5rem;
+        }
+    }
+
+    &__likecount {
+        display: flex;
+
+        &--addedspacing {
+            padding-right: .5rem;
+        }
+    }
+
+    &__synopsis {
+        @include body-copy;
+    }
+}
