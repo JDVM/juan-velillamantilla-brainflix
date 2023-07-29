@@ -38,6 +38,7 @@ function VideoDescrition() {
           won the event for the second time -- eight years after his first Red
           Cow Rampage title{" "}
         </p>
+        <span className="info-panel__numbcomments"> Number of comments</span>
       </div>
     </>
   );

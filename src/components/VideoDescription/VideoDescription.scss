@@ -12,7 +12,10 @@
     }
 
     &__title {
-        @include page-header
+        @include page-header;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        margin: 0;
     }
 
     &__stats {
@@ -23,6 +26,7 @@
         border-top: .0625rem solid;
         border-bottom: .0625rem solid;
         justify-content: space-between;
+        padding: 1rem 0;
 
         @include tablet {
             border-top: 0;
@@ -82,5 +86,9 @@
 
     &__synopsis {
         @include body-copy;
+    }
+    &__numbcomments{
+        @include body-copy;
+        font-weight: 700;
     }
 }
