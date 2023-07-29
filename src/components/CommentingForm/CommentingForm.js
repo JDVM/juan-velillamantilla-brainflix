@@ -8,14 +8,15 @@ function CommentingForm() {
       <div className="comments__formcontainer">
       <label className="comments__label" hmtlfor="Name">
        JOIN THE CONVERSATION
-      </label>
-      <textarea
+     <textarea
           type="text"
           name="nameInput"
           id="Name"
           className="comments__input"
           placeholder="Add a new comment"
         /> 
+      </label>
+    
       <button type="submit" className="comments__button">
         <img src={CommentIcon} className="comments__icon" alt="" />
         <div className="comments__text">COMMENT</div>
