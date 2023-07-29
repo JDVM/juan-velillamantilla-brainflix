@@ -1,0 +1,24 @@
+@use "../../Styles/Partials/fonts" as *;
+@use "../../Styles/Partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+.nxtvidel{
+    display: flex;
+
+    &__image{
+        height: 3.75rem;
+        width: 6.25rem;
+        border-radius: .25rem;
+        margin: 1rem 0;
+    }
+    &__vidinfo{
+        padding-left: 1rem;
+    }
+    &__title{
+        @include body-copy;
+        font-weight: 700;
+    }
+    &__author{
+        @include body-copy;
+    }
+}
