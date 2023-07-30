@@ -10,8 +10,7 @@ function App() {
       <Header />
       <VideoSection />
       <VideoDescrition />
-      <CommentingForm />
-      <CommentEl />
+      <Body />
     </>
   );
 }

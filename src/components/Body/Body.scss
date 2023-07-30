@@ -1,0 +1,12 @@
+@use "../../Styles/Partials/fonts" as *;
+@use "../../Styles/Partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+.body{
+    display: flex;
+    flex-direction: column;
+    @include desktop{
+        flex-direction: row;
+        padding: 0 5rem;
+    }
+}
