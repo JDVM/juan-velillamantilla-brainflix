@@ -8,22 +8,38 @@ import { useState } from "react";
 
 function App() {
   const [vidId, setVidId] = useState(VideoDetails[0].id);
-  
+
   function updateVidId(vidId) {
-    // selectedVidId.preventDefault();
     setVidId(vidId);
-    console.log("APP.JS SELECTEDVID  " + vidId)
-    
   }
   let currentVid = VideoDetails.find(
     (currentVidData) => currentVidData.id === vidId
   );
 
+  let descriptionTimeStamp = new Date(currentVid.timestamp);
+  let descriptionDate = descriptionTimeStamp.getDate();
+  let descriptionMonth = descriptionTimeStamp.getMonth() + 1;
+  let descriptionYear = descriptionTimeStamp.getFullYear();
+  if (descriptionDate < 10) {
+    descriptionDate = "0" + descriptionDate;
+  }
+  if (descriptionMonth < 10) {
+    descriptionMonth = "0" + descriptionMonth;
+  }
+  let descriptionPostDate =
+    descriptionMonth + "/" + descriptionDate + "/" + descriptionYear;
+
   return (
     <>
       <Header />
       <VideoSection currentVid={currentVid} />
-      <Body currentVid={currentVid} videos={Videos} updateVidId={updateVidId} vidId={vidId} />
+      <Body
+        currentVid={currentVid}
+        videos={Videos}
+        updateVidId={updateVidId}
+        vidId={vidId}
+        descriptionPostDate={descriptionPostDate}
+      />
     </>
   );
 }
