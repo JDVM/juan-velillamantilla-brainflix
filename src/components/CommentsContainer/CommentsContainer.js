@@ -1,16 +1,14 @@
 import CommentingForm from "../CommentingForm/CommentingForm";
 import CommentEl from "../CommentEl/CommentEl";
 
-function CommentsContainer() {
+function CommentsContainer(props) {
     return (
         <>
         <CommentingForm />
         <div>
-           <CommentEl /> 
+           <CommentEl comments={props}/> 
         </div>
-        
         </>
-        
     )
 }
 export default CommentsContainer;

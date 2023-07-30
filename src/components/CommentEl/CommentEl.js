@@ -1,21 +1,23 @@
-import './CommentEl.scss'
+import "./CommentEl.scss";
 
-function CommentEl(){
-  return(
-    <article class="comment-el__element">
-  <div class="comment-el__profilePic"></div>
-  <div class="comment-el__container">
-    <span class="comment-el__elementName comment-el__elementName--bold">Emilie Beach</span>
-    <span class="comment-el__elementDate">09/01/2021</span>
-    <p class="comment-el__elementText">
-      I feel blessed to have seen them in person. What a show! They were just
-      perfection. If there was one day of my life I could relive, this would be
-      it. What an incredible day.
-    </p>
-  </div>
-</article>
-  )
+function CommentEl(props) {
+  // console.log(props.comments);
+  // console.log(props.comments.currentVid);
+  ///////////////////////////
+  return props.comments.currentVid.map((comment) => (
+    <article className="comment-el__element">
+      <div className="comment-el__profilePic"></div>
+      <div className="comment-el__container">
+        <span className="comment-el__elementName comment-el__elementName--bold">
+          {comment.name}
+        </span>
+        <span className="comment-el__elementDate">{comment.timestamp}</span>
+        <p className="comment-el__elementText">
+          {comment.comment}
+        </p>
+      </div>
+    </article>
+  ));
 }
 
 export default CommentEl;
-
