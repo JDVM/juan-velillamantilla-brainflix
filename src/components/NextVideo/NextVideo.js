@@ -1,10 +1,10 @@
 import NextVideoEl from "../NextVideoEl/NextVideoEl";
 import "./NextVideo.scss";
 
-function NextVideo() {
+function NextVideo(props) {
   return (
     <div className="nextvid">
-      <NextVideoEl />
+      <NextVideoEl  videos={props.video}/>
     </div>
   );
 }

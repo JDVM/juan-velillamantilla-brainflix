@@ -2,15 +2,14 @@ import "./Body.scss";
 import VideoDescrition from "../VideoDescription/VideoDescription"
 import CommentsContainer from "../CommentsContainer/CommentsContainer";
 import NextVideo from "../NextVideo/NextVideo";
-
-function Body() {
+function Body(props) {
   return (
     <div className="body">
       <div>
-        <VideoDescrition />
-        <CommentsContainer />
+        <VideoDescrition currentVid={props.currentVid}/>
+        <CommentsContainer currentVid={props.currentVid.comments}/>
       </div>
-      <NextVideo />
+      <NextVideo video={props.videos}/>
     </div>
   );
 }

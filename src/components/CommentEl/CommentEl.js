@@ -1,11 +1,8 @@
 import "./CommentEl.scss";
 
 function CommentEl(props) {
-  // console.log(props.comments);
-  // console.log(props.comments.currentVid);
-  ///////////////////////////
   return props.comments.currentVid.map((comment) => (
-    <article className="comment-el__element">
+    <article className="comment-el__element" key={comment.id}>
       <div className="comment-el__profilePic"></div>
       <div className="comment-el__container">
         <span className="comment-el__elementName comment-el__elementName--bold">
