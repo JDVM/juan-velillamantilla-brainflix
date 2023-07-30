@@ -7,11 +7,15 @@ import Videos from "./Data/videos.json";
 import { useState } from "react";
 
 function App() {
-  const [vidId, setVidId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8");
-  function updateVidId(selectedVidId) {
-    setVidId(selectedVidId);
+  const [vidId, setVidId] = useState(VideoDetails[0].id);
+  
+  function updateVidId(vidId) {
+    // selectedVidId.preventDefault();
+    setVidId(vidId);
+    console.log("APP.JS SELECTEDVID  " + vidId)
+    
   }
-  const currentVid = VideoDetails.find(
+  let currentVid = VideoDetails.find(
     (currentVidData) => currentVidData.id === vidId
   );
 
@@ -19,7 +23,7 @@ function App() {
     <>
       <Header />
       <VideoSection currentVid={currentVid} />
-      <Body currentVid={currentVid} videos={Videos} updateVidId={updateVidId} />
+      <Body currentVid={currentVid} videos={Videos} updateVidId={updateVidId} vidId={vidId} />
     </>
   );
 }
