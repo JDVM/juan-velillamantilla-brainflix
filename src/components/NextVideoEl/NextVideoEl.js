@@ -3,7 +3,7 @@ import "./NextVideoEl.scss";
 function NextVideoEl({ videos }) {
   console.log(videos);
   return videos.map((video) => (
-    <div className="nxtvidel" key={video.id}>
+    <div className="nxtvidel" key={video.id} onClick={""}>
       <img
         src={video.image}
         alt="test"
