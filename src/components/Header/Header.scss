@@ -43,7 +43,7 @@
         border-radius: 50%;
         min-width: 2.25rem;
         min-height: 2.25rem;
-        background-image: url(../Assets/Images/Mohan-muruge.jpg);
+        background-image: url(../../Assets/Images/Mohan-muruge.jpg);
         background-size: cover;
         order: 2;
         margin-left: .625rem;
@@ -76,7 +76,7 @@
         min-width: 12rem;
         padding-left: 2rem;
         padding-right: 0;
-        background: url(../Assets/Icons/search.svg) no-repeat scroll 7px 8px;
+        background: url(../../Assets/Icons/search.svg) no-repeat scroll 7px 8px;
 
         @include tablet {
             margin-right: 1rem;

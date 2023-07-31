@@ -1,4 +1,4 @@
-import CommentIcon from '../Assets/Icons/add_comment.svg'
+import CommentIcon from '../../Assets/Icons/add_comment.svg'
 import './CommentingForm.scss'
 
 function CommentingForm(props) {

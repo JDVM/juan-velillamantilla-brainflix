@@ -1,6 +1,6 @@
-import Logo from "../Assets/Logo/BrainFlix-logo.svg";
+import Logo from "../../Assets/Logo/BrainFlix-logo.svg";
 import "./Header.scss";
-import UploadIcon from "../Assets/Icons/upload.svg";
+import UploadIcon from "../../Assets/Icons/upload.svg";
 
 function Header(props) {
   const uploadIcon = UploadIcon;

@@ -1,5 +1,5 @@
-import ViewCount from "../Assets/Icons/views.svg";
-import Likes from "../Assets/Icons/likes.svg";
+import ViewCount from "../../Assets/Icons/views.svg";
+import Likes from "../../Assets/Icons/likes.svg";
 import "./VideoDescription.scss";
 
 function VideoDescrition(props) {
