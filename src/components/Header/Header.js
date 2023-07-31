@@ -2,13 +2,13 @@ import Logo from "../Assets/Logo/BrainFlix-logo.svg";
 import "./Header.scss";
 import UploadIcon from "../Assets/Icons/upload.svg";
 
-
-function Header() {
+function Header(props) {
   const uploadIcon = UploadIcon;
+  console.log(props);
   return (
     <header className="header">
-       <img src={Logo} className="header__logo" alt="Logo for BrainFlix" />
-      <form className="header__form">
+      <img src={Logo} className="header__logo" alt="Logo for BrainFlix" />
+      <form className="header__form" onSubmit={props.searchEventHandler}>
         <div className="header__photo"></div>
         <label className="header__label" hmtlfor="Name">
           <input

@@ -29,9 +29,19 @@ function App() {
   let descriptionPostDate =
     descriptionMonth + "/" + descriptionDate + "/" + descriptionYear;
 
+  function searchEventHandler(event) {
+    event.preventDefault();
+    console.log("test sub");
+  }
+
+  function commentEventHandler(event) {
+    event.preventDefault();
+    console.log("test sub");
+  }
+
   return (
     <>
-      <Header />
+      <Header searchEventHandler={searchEventHandler} />
       <VideoSection currentVid={currentVid} />
       <Body
         currentVid={currentVid}
@@ -39,6 +49,7 @@ function App() {
         updateVidId={updateVidId}
         vidId={vidId}
         descriptionPostDate={descriptionPostDate}
+        commentEventHandler={commentEventHandler}
       />
     </>
   );

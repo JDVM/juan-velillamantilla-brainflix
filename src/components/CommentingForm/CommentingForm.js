@@ -1,9 +1,9 @@
 import CommentIcon from '../Assets/Icons/add_comment.svg'
 import './CommentingForm.scss'
 
-function CommentingForm() {
+function CommentingForm(props) {
   return (
-    <form className="comments__form">
+    <form className="comments__form" onSubmit={props.commentEventHandler}>
       <div className="comments__photo"></div>
       <div className="comments__formcontainer">
       <label className="comments__label" hmtlfor="Name">
