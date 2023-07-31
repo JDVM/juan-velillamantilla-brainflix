@@ -5,8 +5,22 @@
 .body{
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    @include tablet{
+        padding: 1.5rem 0;
+    }
+
     @include desktop{
         flex-direction: row;
-        padding: 0 5rem;
+        padding: 1.5rem 5rem;
+        
+    }
+
+    &__vidinfo{
+       
+        @include desktop{
+            border-right: solid $Mercury 2px; 
+            width: 90%;
+        }
     }
 }

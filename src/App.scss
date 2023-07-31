@@ -5,11 +5,12 @@
 @use "../src/components/VideoSection/VideoSection.scss";
 @use "../src/components/VideoDescription/VideoDescription.scss";
 
+*{ box-sizing: border-box;}
+
 html,
 header,
 nav,
 body{
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }

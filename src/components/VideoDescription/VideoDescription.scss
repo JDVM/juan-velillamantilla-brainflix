@@ -5,15 +5,17 @@
 .info-panel {
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    
 
     @include tablet {
         padding: 0 2rem;
     }
+    @include desktop{
+        padding: 0
+    }
 
     &__title {
         @include page-header;
-        padding-top: 1.5rem;
         padding-bottom: 1rem;
         margin: 0;
     }
@@ -47,9 +49,11 @@
     &__name {
         font-weight: 700;
         color: $brainFlix-Black;
+        padding-bottom: 1rem;
 
         @include tablet {
             padding-right: 2rem;
+            padding-bottom: 0;
         }
     }
 
@@ -62,13 +66,19 @@
             flex-direction: row;
             justify-content: flex-end;
         }
+        @include desktop{
+            padding-right: 2rem;
+        }
     }
 
     &__viewcount {
         display: flex;
+        padding-bottom: 1rem;
+        align-items: center;
 
         @include tablet {
             padding-right: 2rem;
+            padding-bottom: 0;
         }
 
         &--addedspacing {
@@ -78,6 +88,7 @@
 
     &__likecount {
         display: flex;
+        align-items: center;
 
         &--addedspacing {
             padding-right: .5rem;
@@ -86,6 +97,15 @@
 
     &__synopsis {
         @include body-copy;
+        margin:0;
+        padding: 1rem 0 1.5rem 0;
+        @include tablet{
+            padding: 1rem 1.5rem 2rem 0;
+        }
+        @include desktop{
+            padding: 1rem 2.25rem 2rem 0;
+        }
+
     }
     &__numbcomments{
         @include body-copy;

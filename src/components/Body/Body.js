@@ -6,7 +6,7 @@ function Body(props) {
   console.log(props.currentVid.comments);
   return (
     <div className="body">
-      <div>
+      <div className="body__vidinfo">
         <VideoDescrition
           currentVid={props.currentVid}
           descriptionPostDate={props.descriptionPostDate}

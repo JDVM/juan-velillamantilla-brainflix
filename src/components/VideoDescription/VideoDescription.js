@@ -24,7 +24,7 @@ function VideoDescrition(props) {
                 className="info-panel__viewcount--addedspacing"
                 alt=""
               />
-              <span>{props.currentVid.likes}</span>
+              <span>{props.currentVid.views}</span>
             </section>
             <section className="info-panel__likecount">
               <img
@@ -32,7 +32,7 @@ function VideoDescrition(props) {
                 className="info-panel__likecount--addedspacing"
                 alt=""
               />
-              <span>{props.currentVid.views}</span>
+              <span>{props.currentVid.likes}</span>
             </section>
           </div>
         </div>

@@ -32,8 +32,11 @@
 
     &__logo {
         max-width: 7.5rem;
+        width: 7.5rem;
         max-height: 1.5625rem;
-        padding: 1rem;
+        height: 1.5625rem;
+        margin: 1rem 0;
+        
     }
 
     &__photo {
@@ -79,6 +82,11 @@
             margin-right: 1rem;
             min-width: 13.5rem;
         }
+
+        &:focus{
+            outline-color: $brainFlix-Blue;
+            outline-width: 1px;
+        }
     }
 
     &__button {
@@ -94,6 +102,9 @@
         height: 2.5rem;
         align-items: center;
         justify-content: center;
+        &:hover{
+            background-color: $brainFlix-DarkBlue;
+        }
 
         @include tablet {
             order: 2;

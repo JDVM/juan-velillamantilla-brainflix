@@ -14,7 +14,7 @@ function CommentEl(props) {
     if (commentMonth < 10) {
       commentMonth = "0" + commentMonth;
     }
-    let commentPostDate = commentDate + "/" + commentMonth + "/" + commentYear;
+    let commentPostDate = commentMonth + "/" + commentDate + "/" + commentYear;
 
     return (
       <article className="comment-el__element" key={comment.id}>

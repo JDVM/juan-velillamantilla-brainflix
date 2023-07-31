@@ -4,19 +4,24 @@
 
 .nxtvidel{
     display: flex;
+    padding: 1rem 0 0 0;
+    align-items: center;
 
     &__image{
         height: 3.75rem;
-        width: 6.25rem;
+       min-width: 6.25rem;
+        object-fit: cover;
+        object-position: center;
         border-radius: .25rem;
-        margin: 1rem 0;
+        margin:  0;
     }
     &__vidinfo{
         padding-left: 1rem;
     }
     &__title{
         @include body-copy;
-        font-weight: 700;
+        font-weight: 600;
+        margin:  0;
     }
     &__author{
         @include body-copy;

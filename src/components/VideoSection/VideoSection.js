@@ -9,6 +9,7 @@ function VideoSection(props) {
         src={props.currentVid.videos}
         type="video"
         poster={props.currentVid.image}
+        controls
       >
         Error Video Did not Load Properly
       </video>
