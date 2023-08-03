@@ -5,9 +5,7 @@ import Body from "./components/Body/Body";
 import VideoDetails from "./Data/video-details.json";
 import Videos from "./Data/videos.json";
 import { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import uploadPage from "./page/upload";
-import upload from './page/upload'
+
 
 
 function App() {
@@ -44,17 +42,6 @@ function App() {
   }
 
 
-  // return(
-  //   <BrowserRouter>
-  //   <Header searchEventHandler={searchEventHandler} />
-  //   <Routes>
-  //     <Route path="/" element={HomePage}/> //create a page called homepage
-  //     <Route path="/upload" element={upload}/>
-  //     <Route path="/video/:selectedVid" element={HomePage}/>
-  //   </Routes>
-  //   </BrowserRouter>
-  // )
- 
   return (
     <>
       <Header searchEventHandler={searchEventHandler} />
