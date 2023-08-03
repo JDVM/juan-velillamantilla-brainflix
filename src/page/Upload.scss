@@ -1,0 +1,38 @@
+@use "../Styles/partials/fonts" as *;
+@use "../Styles/partials/mixins" as *;
+@use "../Styles/partials/variables" as *;
+
+.upload {
+
+    &title {
+        @include page-header;
+    }
+
+    &__thumbnaillable {
+        @include sub-heading;
+        color: $silver;
+        padding: 1rem 0 1rem 0;
+    }
+
+    &__thumbnail {
+        width: 18rem;
+        border-radius: .25rem;
+    }
+
+    &__inputscontainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__videotitle{
+        @include sub-heading;
+        color: $silver;
+    }
+    &___textinputmod{
+        width: 100%;
+    }
+    &__videodescription{
+        @include sub-heading;
+        color: $silver;
+    }
+}

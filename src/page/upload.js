@@ -1,11 +1,12 @@
 import thumbnailPic from '../Assets//Images/Upload-video-preview.jpg'
 import publishIcon from "../Assets/Icons/publish.svg"
+import './Upload.scss'
 
 function uploadPage() {
   return (
     <div className="upload">
       <h1 className="upload__title">Upload Page</h1>
-      <img src={thumbnailPic} alt="HandleBar" className="upload__image" />
+      <span className='upload__thumbnaillable'>VIDEO THUMBNAIL<img src={thumbnailPic} alt="HandleBars" className="upload__thumbnail" /></span>
       <div className='upload__inputscontainer'>
         <label className='upload__videotitle'>
           TITLE YOUR VIDEO
@@ -25,22 +26,3 @@ function uploadPage() {
 }
 
 export default uploadPage
-
-
-
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import uploadPage from "./page/upload";
-// import upload from './page/upload'
-
-
-  // return(
-  //   <BrowserRouter>
-  //   <Header searchEventHandler={searchEventHandler} />
-  //   <Routes>
-  //     <Route path="/" element={HomePage}/> //create a page called homepage
-  //     <Route path="/upload" element={upload}/>
-  //     <Route path="/video/:selectedVid" element={HomePage}/>
-  //   </Routes>
-  //   </BrowserRouter>
-  // )
- 
