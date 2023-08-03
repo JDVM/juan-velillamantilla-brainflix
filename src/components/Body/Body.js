@@ -2,6 +2,7 @@ import "./Body.scss";
 import VideoDescrition from "../VideoDescription/VideoDescription";
 import CommentsContainer from "../CommentsContainer/CommentsContainer";
 import NextVideo from "../NextVideo/NextVideo";
+import UploadPage from "../../page/upload"
 function Body(props) {
   console.log(props.currentVid.comments);
   return (
@@ -21,6 +22,7 @@ function Body(props) {
         updateVidId={props.updateVidId}
         vidId={props.vidId}
       />
+       <UploadPage />
     </div>
   );
 }
