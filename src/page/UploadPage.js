@@ -1,8 +1,8 @@
 import thumbnailPic from '../Assets//Images/Upload-video-preview.jpg'
 import publishIcon from "../Assets/Icons/publish.svg"
-import './Upload.scss'
+import './UploadPage.scss'
 
-function uploadPage() {
+function UploadPage() {
   return (
     <div className="upload">
       <h1 className="upload__title">Upload Page</h1>
@@ -25,4 +25,4 @@ function uploadPage() {
   );
 }
 
-export default uploadPage
+export default UploadPage
