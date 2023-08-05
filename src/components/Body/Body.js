@@ -5,25 +5,21 @@ import NextVideo from "../NextVideo/NextVideo";
 
 
 
-function Body(props) {
-  console.log(props.currentVid.comments);
+function Body({ selectedVid, filteredVids}) {
+  console.log(selectedVid);
   return (
     <div className="body">
       <div className="body__vidinfo">
         <VideoDescrition
-          currentVid={props.currentVid}
-          descriptionPostDate={props.descriptionPostDate}
+          // currentVid={props.currentVid}
+          // descriptionPostDate={props.descriptionPostDate}
         />
         <CommentsContainer
-          currentVid={props.currentVid.comments}
-          commentEventHandler={props.commentEventHandler}
+          // currentVid={props.currentVid.comments}
+          // commentEventHandler={props.commentEventHandler}
         />
       </div>
-      <NextVideo
-        videos={props.videos}
-        updateVidId={props.updateVidId}
-        vidId={props.vidId}
-      />
+      <NextVideo filteredVids={filteredVids}/>
     </div>
   );
 }

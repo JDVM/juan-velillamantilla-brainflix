@@ -1,19 +1,22 @@
 import "./NextVideoEl.scss";
 
 function NextVideoEl({ videos, updateVidId, vidId}) {
-  return videos.filter((videos) => videos.id !== vidId).map((video) => (
-    <div className="nxtvidel" key={video.id} onClick={() => {updateVidId(video.id)}}>
+  
+  return( 
+  // videos.filter((videos) => videos.id !== vidId).map((video) => (
+    <div className="nxtvidel" key={''}>
       <img
-        src={video.image}
+        src={''}
         alt="test"
         className="nxtvidel__image"
       />
       <div className="nxtvidel__vidinfo">
-        <p className="nxtvidel__title">{video.title}</p>
-        <span className="nxtvidel__author">{video.channel}</span>
+        <p className="nxtvidel__title">{''}</p>
+        <span className="nxtvidel__author">{''}</span>
       </div>
     </div>
-  ));
+  )
+  // );
 }
 
 export default NextVideoEl;

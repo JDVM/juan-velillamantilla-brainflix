@@ -6,15 +6,15 @@ function VideoDescrition(props) {
   return (
     <>
       <div className="info-panel">
-        <h1 className="info-panel__title">{props.currentVid.title}</h1>
+        <h1 className="info-panel__title">{''}</h1>
         <div className="info-panel__stats">
           <div className="info-panel__by-and-date">
             <span className="info-panel__name">
-              By {props.currentVid.channel}
+              By {''}
             </span>
             <span className="info-panel__date">
               {" "}
-              {props.descriptionPostDate}
+              {''}
             </span>
           </div>
           <div className="info-panel__viewstats">
@@ -24,7 +24,7 @@ function VideoDescrition(props) {
                 className="info-panel__viewcount--addedspacing"
                 alt=""
               />
-              <span>{props.currentVid.views}</span>
+              <span>{''}</span>
             </section>
             <section className="info-panel__likecount">
               <img
@@ -32,13 +32,13 @@ function VideoDescrition(props) {
                 className="info-panel__likecount--addedspacing"
                 alt=""
               />
-              <span>{props.currentVid.likes}</span>
+              <span>{''}</span>
             </section>
           </div>
         </div>
-        <p className="info-panel__synopsis">{props.currentVid.description}</p>
+        <p className="info-panel__synopsis">{''}</p>
         <span className="info-panel__numbcomments">
-          {props.currentVid.comments.length} Comment
+          {''} Comment
         </span>
       </div>
     </>

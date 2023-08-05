@@ -2,33 +2,47 @@ import VideoSection from "../components/VideoSection/VideoSection";
 import Body from "../components/Body/Body";
 // import VideoDetails from "../Data/video-details.json";
 // import Videos from "../Data/videos.json";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-
+import axios from "axios";
 import { getVidDetailsById, getVidDetails } from "../utils/api-utils";
 
 const Homepage = () => {
-  const [vidId, setVidId] = useState(null);
 
-  function updateVidId(vidId) {
-    setVidId(vidId);
-  }
-  let currentVid = VideoDetails.find(
-    (currentVidData) => currentVidData.id === vidId
-  );
 
-  let descriptionTimeStamp = new Date(currentVid.timestamp);
-  let descriptionDate = descriptionTimeStamp.getDate();
-  let descriptionMonth = descriptionTimeStamp.getMonth() + 1;
-  let descriptionYear = descriptionTimeStamp.getFullYear();
-  if (descriptionDate < 10) {
-    descriptionDate = "0" + descriptionDate;
+  const [vid, setVid] = useState(null);
+  const { vidId } = useParams();
+  
+  useEffect(() => {
+    axios.get(getVidDetails()).then((res) => {
+      const vidDetails = res.data;
+      console.log(vidDetails)
+      setVid(vidDetails);
+    });
+  }, []);
+
+  
+
+  if (vid === null){
+    return <h1>Loading Please Wait</h1>
   }
-  if (descriptionMonth < 10) {
-    descriptionMonth = "0" + descriptionMonth;
-  }
-  let descriptionPostDate =
-    descriptionMonth + "/" + descriptionDate + "/" + descriptionYear;
+
+  const selectedVid = vidId || vid[0].id;
+console.log("selected Vid ", selectedVid)
+  const filteredVids = vid.filter((video) => video.id !== selectedVid)
+  console.log("filtered vid ",  filteredVids)
+//   let descriptionTimeStamp = new Date(currentVid.timestamp);
+//   let descriptionDate = descriptionTimeStamp.getDate();
+//   let descriptionMonth = descriptionTimeStamp.getMonth() + 1;
+//   let descriptionYear = descriptionTimeStamp.getFullYear();
+//   if (descriptionDate < 10) {
+//     descriptionDate = "0" + descriptionDate;
+//   }
+//   if (descriptionMonth < 10) {
+//     descriptionMonth = "0" + descriptionMonth;
+//   }
+//   let descriptionPostDate =
+//     descriptionMonth + "/" + descriptionDate + "/" + descriptionYear;
 
   function commentEventHandler(event) {
     event.preventDefault();
@@ -37,14 +51,12 @@ const Homepage = () => {
 
   return (
     <>
-      <VideoSection currentVid={currentVid} />
+      <VideoSection selectedVid={selectedVid} />
       <Body
-        currentVid={currentVid}
-        videos={Videos}
-        updateVidId={updateVidId}
-        vidId={vidId}
-        descriptionPostDate={descriptionPostDate}
-        commentEventHandler={commentEventHandler}
+        selectedVid={selectedVid}
+        filteredVids={filteredVids}
+        // descriptionPostDate={descriptionPostDate}
+        // commentEventHandler={commentEventHandler}
       />
     </>
   );
