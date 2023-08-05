@@ -1,8 +1,14 @@
 import thumbnailPic from '../Assets//Images/Upload-video-preview.jpg'
 import publishIcon from "../Assets/Icons/publish.svg"
 import './UploadPage.scss'
+import { Link } from 'react-router-dom'
 
 function UploadPage() {
+  const alert = (event) => {
+    event.preventDefault();
+    window.alert("Your Video is being processed")
+    window.location.href='/'
+  }
   return (
     <div className="upload">
       <h1 className="upload__title">Upload Page</h1>
@@ -18,8 +24,8 @@ function UploadPage() {
         </label>
       </div>
       <div className='upload__buttoncontainer'>
-        <button className='upload__button'><img src={publishIcon}/>PUBLISH</button>
-        <button className='upload__button'>CANCEL</button>
+        <button className='upload__button' onClick={alert}><img src={publishIcon}/>PUBLISH</button>
+        <Link to={'/'}><button className='upload__button'>CANCEL</button></Link>
       </div>
     </div>
   );

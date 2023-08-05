@@ -3,7 +3,7 @@
 @use "../Styles/partials/variables" as *;
 
 .upload {
-
+    padding: 0 1rem;
     &title {
         @include page-header;
     }
