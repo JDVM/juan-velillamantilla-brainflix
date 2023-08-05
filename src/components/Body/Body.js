@@ -3,6 +3,8 @@ import VideoDescrition from "../VideoDescription/VideoDescription";
 import CommentsContainer from "../CommentsContainer/CommentsContainer";
 import NextVideo from "../NextVideo/NextVideo";
 
+
+
 function Body(props) {
   console.log(props.currentVid.comments);
   return (

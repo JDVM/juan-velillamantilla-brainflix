@@ -1,11 +1,14 @@
 import VideoSection from "../components/VideoSection/VideoSection";
 import Body from "../components/Body/Body";
-import VideoDetails from "../Data/video-details.json";
-import Videos from "../Data/videos.json";
-import { useState } from "react";
+// import VideoDetails from "../Data/video-details.json";
+// import Videos from "../Data/videos.json";
+import { useState, useEffect} from "react";
+import { useParams } from "react-router";
+
+import { getVidDetailsById, getVidDetails } from "../utils/api-utils";
 
 const Homepage = () => {
-  const [vidId, setVidId] = useState(VideoDetails[0].id);
+  const [vidId, setVidId] = useState(null);
 
   function updateVidId(vidId) {
     setVidId(vidId);
