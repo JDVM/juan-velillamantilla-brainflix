@@ -3,8 +3,6 @@ import tiempo from "tiempo";
 
 function CommentEl({ comments }) {
   console.log(comments);
-
-  console.log();
   return comments.map((comment) => (
     <article className="comment-el__element" key={comment.id}>
       <div className="comment-el__profilePic"></div>

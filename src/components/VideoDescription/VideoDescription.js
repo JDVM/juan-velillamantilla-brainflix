@@ -3,11 +3,11 @@ import Likes from "../../Assets/Icons/likes.svg";
 import "./VideoDescription.scss";
 
 function VideoDescrition({currentVid, descriptionPostDate}) {
-  console.log(currentVid.comments.length)
+  console.log(currentVid)
   return (
     <>
       <div className="info-panel">
-        <h1 className="info-panel__title">{''}</h1>
+        <h1 className="info-panel__title">{currentVid.title}</h1>
         <div className="info-panel__stats">
           <div className="info-panel__by-and-date">
             <span className="info-panel__name">
@@ -36,7 +36,7 @@ function VideoDescrition({currentVid, descriptionPostDate}) {
             </section>
           </div>
         </div>
-        <p className="info-panel__synopsis">{''}</p>
+        <p className="info-panel__synopsis">{currentVid.description}</p>
         <span className="info-panel__numbcomments">
           {currentVid.comments.length} Comments
         </span>
