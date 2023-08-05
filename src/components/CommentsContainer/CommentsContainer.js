@@ -1,12 +1,15 @@
 import CommentingForm from "../CommentingForm/CommentingForm";
 import CommentEl from "../CommentEl/CommentEl";
 
-function CommentsContainer(props) {
+function CommentsContainer({currentVidComments}) {
+  console.log(currentVidComments)
+
+
   return (
     <>
-      <CommentingForm commentEventHandler={props.commentEventHandler} />
+      <CommentingForm />
       <div>
-        <CommentEl comments={props} />
+        <CommentEl comments={currentVidComments} />
       </div>
     </>
   );

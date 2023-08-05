@@ -11,8 +11,11 @@ console.log(selectedVid)
       console.log("vidData: ", vidData)
       setCurrentVid(vidData);
     });
-  }, []);
-
+  }, [selectedVid]);
+  if (currentVid === null){
+    return <h1>Loading Please Wait</h1>
+  }
+console.log(" current vid ", currentVid)
   return (
     <div className="video">
       <video
