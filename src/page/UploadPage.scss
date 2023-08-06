@@ -4,6 +4,10 @@
 
 .upload {
     padding: 0 1rem;
+    @include tablet{
+        border-top: .125rem solid $Mercury;
+        padding: 0 2rem;
+    }
     &title {
         @include page-header;
     }
@@ -27,12 +31,68 @@
     &__videotitle{
         @include sub-heading;
         color: $silver;
+        padding: 1rem 0;
     }
-    &___textinputmod{
+    &__textinputmod{
         width: 100%;
+        resize: none;
+        padding: .5rem;
+        @include body-copy;
+        background-color: $Mercury;
+        border-radius: .25rem;
+        border
+        
+        &:focus{
+            outline-color: $brainFlix-Blue;
+            outline-width: 1px;
+        }
     }
     &__videodescription{
         @include sub-heading;
         color: $silver;
+        padding-bottom: 1rem;
+    }
+    &__buttoncontainer{
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+            border-top: .125rem solid $Mercury;
+            padding: 2rem 0;
+            flex-direction: row-reverse;
+        }
+    }
+    &__publish{
+        @include lables-buttons;
+        color: $white;
+        margin-bottom: 1rem ;
+        display: flex;
+        background-color: $brainFlix-Blue;
+        border-radius: .25rem;
+        border: none;
+        width: 100%;
+        height: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            background-color: $brainFlix-DarkBlue;
+        }
+        @include tablet{
+        width: 30%;
+        }
+    }
+    &__text {
+        width: 100%;
+    }
+    &__cancel{
+        @include lables-buttons;
+        color: $brainFlix-Blue;
+        display: flex;
+        background-color: $white;
+        border-radius: .25rem;
+        border: none;
+        width: 100%;
+        height: 2.5rem;
+        align-items: center;
+        justify-content: center;
     }
 }

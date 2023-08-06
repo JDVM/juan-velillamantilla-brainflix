@@ -24,8 +24,8 @@ function UploadPage() {
         </label>
       </div>
       <div className='upload__buttoncontainer'>
-        <button className='upload__button' onClick={alert}><img src={publishIcon}/>PUBLISH</button>
-        <Link to={'/'}><button className='upload__button'>CANCEL</button></Link>
+        <button className='upload__publish' onClick={alert}><img src={publishIcon}/><div className='upload__text'>PUBLISH</div></button>
+        <Link to={'/'}><button className='upload__cancel'>CANCEL</button></Link>
       </div>
     </div>
   );
