@@ -22,30 +22,19 @@ const Homepage = () => {
   }
 
   const selectedVid = vidId || vid[0].id;
-  // console.log("selected Vid ", selectedVid);
-  // console.log(vid[0].id);
-  // console.log(selectedVid);
-
-  // console.log("selected Vid ", selectedVid)
 
   const filteredVids = vid.filter((video) => video.id !== selectedVid);
   console.log("filtered vid ", filteredVids);
-  
 
-  function commentEventHandler(event) {
-    event.preventDefault();
-    console.log("test sub");
-  }
+  // function commentEventHandler(event) {
+  //   event.preventDefault();
+  //   console.log("test sub");
+  // }
   console.log("VID!!!!", vid);
   return (
     <>
       <VideoSection selectedVid={selectedVid} />
-      <Body
-        selectedVid={selectedVid}
-        filteredVids={filteredVids}
-        // descriptionPostDate={descriptionPostDate}
-        // commentEventHandler={commentEventHandler}
-      />
+      <Body selectedVid={selectedVid} filteredVids={filteredVids} />
     </>
   );
 };
