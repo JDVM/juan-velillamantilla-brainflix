@@ -12,7 +12,8 @@ function Body({ selectedVid, filteredVids}) {
   console.log(selectedVid);
   const [currentVid, setCurrentVid] = useState(null);
   console.log(selectedVid)
-    useEffect(() => {
+    
+  useEffect(() => {
       axios.get(getVidDetailsById(selectedVid)).then(({ data: vidData }) => {
         console.log("vidData: ", vidData)
         setCurrentVid(vidData);
