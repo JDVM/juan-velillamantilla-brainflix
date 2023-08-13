@@ -3,14 +3,14 @@ import Body from "../components/Body/Body";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
-import { getVidDetails } from "../utils/api-utils";
+import { VidDetails } from "../utils/api-utils";
 
 const Homepage = () => {
   const [vid, setVid] = useState(null);
   const { vidId } = useParams();
 
   useEffect(() => {
-    axios.get(getVidDetails()).then((res) => {
+    axios.get(VidDetails()).then((res) => {
       const vidDetails = res.data;
       console.log(vidDetails);
       setVid(vidDetails);
