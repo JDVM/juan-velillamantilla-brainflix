@@ -1,9 +1,9 @@
-import VideoSection from "../components/VideoSection/VideoSection";
-import Body from "../components/Body/Body";
+import VideoSection from "../../components/VideoSection/VideoSection";
+import Body from "../../components/Body/Body";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
-import { VidDetails } from "../utils/api-utils";
+import { VidDetails } from "../../utils/api-utils";
 
 const Homepage = () => {
   const [vid, setVid] = useState(null);

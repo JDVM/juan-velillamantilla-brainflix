@@ -1,8 +1,8 @@
-import thumbnailPic from "../Assets//Images/Upload-video-preview.jpg";
-import publishIcon from "../Assets/Icons/publish.svg";
+import thumbnailPic from "../../Assets/Images/Upload-video-preview.jpg";
+import publishIcon from "../../Assets/Icons/publish.svg";
 import "./UploadPage.scss";
 import { Link } from "react-router-dom";
-import { VidDetails } from "../utils/api-utils";
+import { VidDetails } from "../../utils/api-utils";
 import axios from "axios";
 
 function UploadPage() {
@@ -35,9 +35,6 @@ function UploadPage() {
       .catch((error) => {
         window.alert.error("Video did not post:", error);
       });
-
-    window.alert("Your Video is being processed");
-    window.location.href = "/";
 
     event.target.reset();
   };

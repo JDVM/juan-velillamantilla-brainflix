@@ -1,6 +1,6 @@
-@use "../Styles/partials/fonts" as *;
-@use "../Styles/partials/mixins" as *;
-@use "../Styles/partials/variables" as *;
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
 
 .upload {
     padding: 0 1rem;
