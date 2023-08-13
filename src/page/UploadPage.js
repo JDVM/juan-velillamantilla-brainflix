@@ -2,33 +2,43 @@ import thumbnailPic from "../Assets//Images/Upload-video-preview.jpg";
 import publishIcon from "../Assets/Icons/publish.svg";
 import "./UploadPage.scss";
 import { Link } from "react-router-dom";
-import { API_URL, VidDetails } from "../utils/api-utils";
+import { VidDetails } from "../utils/api-utils";
 import axios from "axios";
-import { useState } from "react";
-
 
 function UploadPage() {
-   const [vid, setVid] = useState(null);
   const handleSubmit = (event) => {
-   
     event.preventDefault();
-    window.alert("Your Video is being processed");
-    // window.location.href = "/";
+    if (
+      event.target.videotitle.value === "" ||
+      event.target.videodescription.value === ""
+    ) {
+      window.alert("Please fill out all fields");
+
+      if (event.target.videotitle.value === "") {
+        event.target.videotitle.classList.add("error");
+      }
+      if (event.target.videodescription.value === "") {
+        event.target.videodescription.classList.add("error");
+      }
+      return;
+    }
     axios
       .post(VidDetails(), {
         title: event.target.videotitle.value,
         description: event.target.videodescription.value,
       })
-      .then(() => {
-        return axios.get(VidDetails()).then((res) => {
-          const vidDetails = res.data;
-          console.log(vidDetails);
-          setVid(vidDetails);
-        })
+      .then((response) => {
+        console.log("Video posted successfully:", response.data);
+        window.alert("Your Video is being processed");
+        window.location.href = "/";
       })
       .catch((error) => {
-        console.error("Video did not post:", error);
+        window.alert.error("Video did not post:", error);
       });
+
+    window.alert("Your Video is being processed");
+    window.location.href = "/";
+
     event.target.reset();
   };
 
@@ -48,7 +58,7 @@ function UploadPage() {
           <label className="upload__videotitle">
             TITLE YOUR VIDEO
             <input
-              className="upload__textinputmod"
+              className="upload__textinputmod input"
               name="videotitle"
               id="videotitle"
               placeholder="Add a title to your video"
@@ -57,7 +67,7 @@ function UploadPage() {
           <label className="upload__videodescription">
             ADD A VIDEO DESCRIPTION
             <textarea
-              className="upload__textinputmod"
+              className="upload__textinputmod input"
               id="videodescription"
               placeholder="Add a description to your video"
             ></textarea>
