@@ -3,7 +3,6 @@ import Likes from "../../Assets/Icons/likes.svg";
 import "./VideoDescription.scss";
 
 function VideoDescrition({currentVid, descriptionPostDate}) {
-  console.log(currentVid)
   return (
     <>
       <div className="info-panel">

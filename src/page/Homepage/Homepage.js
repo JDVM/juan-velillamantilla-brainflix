@@ -12,7 +12,6 @@ const Homepage = () => {
   useEffect(() => {
     axios.get(VidDetails()).then((res) => {
       const vidDetails = res.data;
-      console.log(vidDetails);
       setVid(vidDetails);
     });
   }, []);
@@ -24,13 +23,10 @@ const Homepage = () => {
   const selectedVid = vidId || vid[0].id;
 
   const filteredVids = vid.filter((video) => video.id !== selectedVid);
-  console.log("filtered vid ", filteredVids);
 
   function commentEventHandler(event) {
     event.preventDefault();
-    console.log("test sub");
   }
-  console.log("VID!!!!", vid);
   return (
     <>
       <VideoSection selectedVid={selectedVid} />

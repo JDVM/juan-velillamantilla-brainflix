@@ -9,7 +9,6 @@ function App() {
 
   function searchEventHandler(event) {
     event.preventDefault();
-    console.log("test sub");
   }
 
 
