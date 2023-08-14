@@ -3,8 +3,8 @@ import "./NextVideo.scss";
 
 function NextVideo({filteredVids}) {
   return (
-    <div className="nextvid">
-      <span className="nextvid__title">NEXT VIDEOS</span>
+    <div className="next-vid">
+      <span className="next-vid__title">NEXT VIDEOS</span>
       <NextVideoEl filteredVids={filteredVids} />
     </div>
   );

@@ -57,7 +57,7 @@
         }
     }
 
-    &__viewstats {
+    &__view-stats {
         display: flex;
         flex-direction: column;
         width: 50%;
@@ -71,7 +71,7 @@
         }
     }
 
-    &__viewcount {
+    &__view-count {
         display: flex;
         padding-bottom: 1rem;
         align-items: center;
@@ -81,16 +81,16 @@
             padding-bottom: 0;
         }
 
-        &--addedspacing {
+        &--added-spacing {
             padding-right: .5rem;
         }
     }
 
-    &__likecount {
+    &__like-count {
         display: flex;
         align-items: center;
 
-        &--addedspacing {
+        &--added-spacing {
             padding-right: .5rem;
         }
     }
@@ -107,7 +107,7 @@
         }
 
     }
-    &__numbcomments{
+    &__numb-comments{
         @include body-copy;
         font-weight: 700;
     }

@@ -1,13 +1,10 @@
 import CommentingForm from "../CommentingForm/CommentingForm";
 import CommentEl from "../CommentEl/CommentEl";
 
-function CommentsContainer({currentVidComments}) {
-  console.log(currentVidComments)
-
-
+function CommentsContainer({ currentVidComments, commentEventHandler }) {
   return (
     <>
-      <CommentingForm />
+      <CommentingForm commentEventHandler={commentEventHandler} />
       <div>
         <CommentEl comments={currentVidComments} />
       </div>

@@ -3,7 +3,6 @@ import Likes from "../../Assets/Icons/likes.svg";
 import "./VideoDescription.scss";
 
 function VideoDescrition({currentVid, descriptionPostDate}) {
-  console.log(currentVid)
   return (
     <>
       <div className="info-panel">
@@ -17,19 +16,19 @@ function VideoDescrition({currentVid, descriptionPostDate}) {
               {descriptionPostDate}
             </span>
           </div>
-          <div className="info-panel__viewstats">
-            <section className="info-panel__viewcount">
+          <div className="info-panel__view-stats">
+            <section className="info-panel__view-count">
               <img
                 src={ViewCount}
-                className="info-panel__viewcount--addedspacing"
+                className="info-panel__view-count--added-spacing"
                 alt=""
               />
               <span>{currentVid.views}</span>
             </section>
-            <section className="info-panel__likecount">
+            <section className="info-panel__like-count">
               <img
                 src={Likes}
-                className="info-panel__likecount--addedspacing"
+                className="info-panel__like-count--added-spacing"
                 alt=""
               />
               <span>{currentVid.likes}</span>
@@ -37,7 +36,7 @@ function VideoDescrition({currentVid, descriptionPostDate}) {
           </div>
         </div>
         <p className="info-panel__synopsis">{currentVid.description}</p>
-        <span className="info-panel__numbcomments">
+        <span className="info-panel__numb-comments">
           {currentVid.comments.length} Comments
         </span>
       </div>

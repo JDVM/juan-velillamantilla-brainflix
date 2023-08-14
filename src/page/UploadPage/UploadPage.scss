@@ -1,6 +1,6 @@
-@use "../Styles/partials/fonts" as *;
-@use "../Styles/partials/mixins" as *;
-@use "../Styles/partials/variables" as *;
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
 
 .upload {
     padding: 0 1rem;
@@ -18,7 +18,7 @@
         @include page-header;
     }
 
-    &__thumbnaillable {
+    &__thumbnail-lable {
         @include sub-heading;
         color: $silver;
         padding: 1rem 0 1rem 0;
@@ -43,7 +43,7 @@
         border-radius: .25rem;
     }
 
-    &__inputscontainer {
+    &__inputs-container {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -54,13 +54,13 @@
         }
     }
 
-    &__videotitle {
+    &__video-title {
         @include sub-heading;
         color: $silver;
         padding: 1rem 0;
     }
 
-    &__textinputmod {
+    &__text-input-mod {
         width: 100%;
         resize: none;
         padding: .5rem;
@@ -77,13 +77,13 @@
 
 
 
-    &__videodescription {
+    &__video-description {
         @include sub-heading;
         color: $silver;
         // padding-bottom: 1rem;
     }
 
-    &__buttoncontainer {
+    &__button-container {
         display: flex;
         flex-direction: column;
 
@@ -139,4 +139,8 @@
         align-items: center;
         justify-content: center;
     }
+}
+
+.error{
+    border-color: red;
 }

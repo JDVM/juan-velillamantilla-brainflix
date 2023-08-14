@@ -5,7 +5,7 @@ function CommentingForm(props) {
   return (
     <form className="comments__form" onSubmit={props.commentEventHandler}>
       <div className="comments__photo"></div>
-      <div className="comments__formcontainer">
+      <div className="comments__form-container">
       <label className="comments__label" hmtlfor="Name">
        JOIN THE CONVERSATION
      <textarea

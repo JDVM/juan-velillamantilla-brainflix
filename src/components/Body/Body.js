@@ -6,49 +6,44 @@ import { useState, useEffect } from "react";
 import { getVidDetailsById } from "../../utils/api-utils";
 import axios from "axios";
 
-
-
-function Body({ selectedVid, filteredVids}) {
-  console.log(selectedVid);
+function Body({ selectedVid, filteredVids, commentEventHandler }) {
   const [currentVid, setCurrentVid] = useState(null);
-  console.log(selectedVid)
-    useEffect(() => {
-      axios.get(getVidDetailsById(selectedVid)).then(({ data: vidData }) => {
-        console.log("vidData: ", vidData)
-        setCurrentVid(vidData);
-      });
-    }, [selectedVid]);
-    if (currentVid === null){
-      return <h1>Loading Please Wait</h1>
-    }
 
-      let descriptionTimeStamp = new Date(currentVid.timestamp);
-    let descriptionDate = descriptionTimeStamp.getDate();
-    let descriptionMonth = descriptionTimeStamp.getMonth() + 1;
-    let descriptionYear = descriptionTimeStamp.getFullYear();
-    if (descriptionDate < 10) {
-      descriptionDate = "0" + descriptionDate;
-    }
-    if (descriptionMonth < 10) {
-      descriptionMonth = "0" + descriptionMonth;
-    }
-    let descriptionPostDate =
-      descriptionMonth + "/" + descriptionDate + "/" + descriptionYear;
+  useEffect(() => {
+    axios.get(getVidDetailsById(selectedVid)).then(({ data: vidData }) => {
+      setCurrentVid(vidData);
+    });
+  }, [selectedVid]);
+  if (currentVid === null) {
+    return <h1>Loading Please Wait</h1>;
+  }
 
-    console.log("current Vid", currentVid.comments);
-    console.log(descriptionPostDate);
+  let descriptionTimeStamp = new Date(currentVid.timestamp);
+  let descriptionDate = descriptionTimeStamp.getDate();
+  let descriptionMonth = descriptionTimeStamp.getMonth() + 1;
+  let descriptionYear = descriptionTimeStamp.getFullYear();
+  if (descriptionDate < 10) {
+    descriptionDate = "0" + descriptionDate;
+  }
+  if (descriptionMonth < 10) {
+    descriptionMonth = "0" + descriptionMonth;
+  }
+  let descriptionPostDate =
+    descriptionMonth + "/" + descriptionDate + "/" + descriptionYear;
+
   return (
     <div className="body">
-      <div className="body__vidinfo">
+      <div className="body__vid-info">
         <VideoDescrition
           currentVid={currentVid}
           descriptionPostDate={descriptionPostDate}
         />
         <CommentsContainer
-          currentVidComments={currentVid.comments}   
+          currentVidComments={currentVid.comments}
+          commentEventHandler={commentEventHandler}
         />
       </div>
-      <NextVideo filteredVids={filteredVids}/>
+      <NextVideo filteredVids={filteredVids} />
     </div>
   );
 }

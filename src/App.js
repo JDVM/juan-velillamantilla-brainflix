@@ -1,15 +1,14 @@
 import Header from "./components/Header/Header";
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Homepage from "./page/Homepage";
-import UploadPage from "./page/UploadPage";
-import PageNotFound from "./page/PageNotFound"
+import Homepage from "./page/Homepage/Homepage";
+import UploadPage from "./page/UploadPage/UploadPage";
+import PageNotFound from "./page/PageNotFound/PageNotFound"
 
 function App() {
 
   function searchEventHandler(event) {
     event.preventDefault();
-    console.log("test sub");
   }
 
 
