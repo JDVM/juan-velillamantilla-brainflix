@@ -43,7 +43,7 @@ function UploadPage() {
     <form className="upload" onSubmit={handleSubmit}>
       <h1 className="upload__title">Upload Page</h1>
       <div className="upload__body">
-        <span className="upload__thumbnaillable">
+        <span className="upload__thumbnail-lable">
           VIDEO THUMBNAIL
           <img
             src={thumbnailPic}
@@ -51,27 +51,27 @@ function UploadPage() {
             className="upload__thumbnail"
           />
         </span>
-        <div className="upload__inputscontainer">
-          <label className="upload__videotitle">
+        <div className="upload__inputs-container">
+          <label className="upload__video-title">
             TITLE YOUR VIDEO
             <input
-              className="upload__textinputmod input"
+              className="upload__text-input-mod input"
               name="videotitle"
               id="videotitle"
               placeholder="Add a title to your video"
             ></input>
           </label>
-          <label className="upload__videodescription">
+          <label className="upload__video-description">
             ADD A VIDEO DESCRIPTION
             <textarea
-              className="upload__textinputmod input"
-              id="videodescription"
+              className="upload__text-input-mod input"
+              id="video-description"
               placeholder="Add a description to your video"
             ></textarea>
           </label>
         </div>
       </div>
-      <div className="upload__buttoncontainer">
+      <div className="upload__button-container">
         <button className="upload__publish">
           <img src={publishIcon} alt="" />
           <div className="upload__text">PUBLISH</div>

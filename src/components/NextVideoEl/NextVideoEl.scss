@@ -2,7 +2,7 @@
 @use "../../Styles/Partials/mixins" as *;
 @use "../../Styles/partials/variables" as *;
 
-.nxtvidel{
+.next-vid-el{
     display: flex;
     padding: 1rem 0 0 0;
     align-items: center;
@@ -16,7 +16,7 @@
         border-radius: .25rem;
         margin:  0;
     }
-    &__vidinfo{
+    &__vid-info{
         padding-left: 1rem;
     }
     &__title{

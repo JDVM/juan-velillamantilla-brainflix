@@ -37,7 +37,7 @@
     }
   }
 
-  &__profilePic {
+  &__profile-pic {
     @include profile-Picture
   }
 
@@ -50,7 +50,7 @@
     padding-left: .7rem;
   }
 
-  &__elementName {
+  &__element-name {
     @include body-copy;
     padding: 0;
     &--bold{
@@ -58,13 +58,13 @@
     }
   }
 
-  &__elementDate {
+  &__element-date {
     @include body-copy;
     padding: 0;
     color: $silver;
   }
 
-  &__elementText {
+  &__element-text {
     @include body-copy;
     padding-top: 1rem;
     padding-left: 0;

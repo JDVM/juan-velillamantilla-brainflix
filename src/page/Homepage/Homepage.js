@@ -22,15 +22,9 @@ const Homepage = () => {
   }
 
   const selectedVid = vidId || vid[0].id;
-  // console.log("selected Vid ", selectedVid);
-  // console.log(vid[0].id);
-  // console.log(selectedVid);
-
-  // console.log("selected Vid ", selectedVid)
 
   const filteredVids = vid.filter((video) => video.id !== selectedVid);
   console.log("filtered vid ", filteredVids);
-  
 
   function commentEventHandler(event) {
     event.preventDefault();
@@ -43,8 +37,7 @@ const Homepage = () => {
       <Body
         selectedVid={selectedVid}
         filteredVids={filteredVids}
-        // descriptionPostDate={descriptionPostDate}
-        // commentEventHandler={commentEventHandler}
+        commentEventHandler={commentEventHandler}
       />
     </>
   );

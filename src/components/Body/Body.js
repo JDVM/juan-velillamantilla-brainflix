@@ -8,7 +8,7 @@ import axios from "axios";
 
 
 
-function Body({ selectedVid, filteredVids}) {
+function Body({ selectedVid, filteredVids, commentEventHandler}) {
   console.log(selectedVid);
   const [currentVid, setCurrentVid] = useState(null);
   console.log(selectedVid)
@@ -40,13 +40,13 @@ function Body({ selectedVid, filteredVids}) {
     console.log(descriptionPostDate);
   return (
     <div className="body">
-      <div className="body__vidinfo">
+      <div className="body__vid-info">
         <VideoDescrition
           currentVid={currentVid}
           descriptionPostDate={descriptionPostDate}
         />
         <CommentsContainer
-          currentVidComments={currentVid.comments}   
+          currentVidComments={currentVid.comments} commentEventHandler={commentEventHandler}  
         />
       </div>
       <NextVideo filteredVids={filteredVids}/>
