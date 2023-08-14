@@ -65,7 +65,7 @@ function UploadPage() {
             ADD A VIDEO DESCRIPTION
             <textarea
               className="upload__text-input-mod input"
-              id="video-description"
+              id="videodescription"
               placeholder="Add a description to your video"
             ></textarea>
           </label>
