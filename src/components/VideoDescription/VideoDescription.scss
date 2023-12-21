@@ -18,6 +18,9 @@
         @include page-header;
         padding-bottom: 1rem;
         margin: 0;
+        @include tablet{
+            @include page-header
+        }
     }
 
     &__stats {
